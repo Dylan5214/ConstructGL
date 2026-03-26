@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "renderer/Shader.h"
 
 struct GLFWwindow;
 
@@ -20,4 +21,9 @@ private:
     std::string m_Title;
     int m_Width, m_Height;
     bool m_Running = true;
+
+    unsigned int m_VAO = 0;
+    unsigned int m_VBO = 0;
+    unsigned int m_EBO = 0;
+    Shader* m_Shader = nullptr;
 };
